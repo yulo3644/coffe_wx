@@ -1,0 +1,64 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+  <view class="img">
+  <image src="{{dataobj.large_img}}" alt=""/>
+  </view>
+  <view class="introduce">
+  <view class="titname">
+  <view class="nameleft">
+  <view>
+    <text>{{dataobj.name}}</text>
+  </view>
+  <view>
+    <text>{{dataobj.enname}}</text>
+  </view>
+  </view>
+  <view class="nameright">
+    <text>￥{{dataobj.price}}</text>
+  </view>
+  </view>
+  <view class="select">
+  <view class="selectitem" wx:if="{{sugar_desc==null?false:true}}">
+  <view>
+    <text>{{sugar_desc}}</text>
+  </view>
+  <view>
+    <text class="{{sugarindex==index?'active':''}}" wx:for="{{sugar}}" wx:key="index" data-text="{{item}}" data-index="{{index}}" bindtap="sugar">{{item}}</text>
+  </view>
+  </view>
+  <!-- 温度 -->
+  <view class="selectitem" wx:if="{{tem_desc==null?false:true}}">
+  <view>
+    <text>{{tem_desc}}</text>
+  </view>
+  <view>
+    <text class="{{temindex==index?'active':''}}" wx:for="{{tem}}" wx:key="index" data-text="{{item}}" data-index="{{index}}" bindtap="tem">{{item}}</text>
+  </view>
+  </view>
+  </view>
+  <view class="select-count-box">
+    <view>
+      <text>选择数量</text>
+    </view>
+    <view>
+      <text bindtap="sub">-</text>
+      <text>{{count}}</text>
+      <text bindtap="add">+</text>
+    </view>
+  </view>
+  <view class="desc">
+    <view class="tit">
+      <text>商品描述</text>
+    </view>
+    <view class="mains">
+      {{dataobj.desc}}
+    </view>
+  </view>
+  <van-goods-action>
+  <van-goods-action-icon icon="bag" text="购物袋" bindtap="gocart" info="{{counts}}"/>
+  <van-goods-action-icon  wx:if="{{!isshow}}" icon="like-o" text="未收藏" bind:click="addcollect" />
+  <van-goods-action-icon  wx:if="{{isshow}}" icon="like" color="#FA374F" text="已收藏" bind:click="addcollect" />
+  <van-goods-action-button color="linear-gradient(-90deg,#0c34ba 10%,#0c34ba 100%)" text="加入购物袋" bind:click="addcart" />
+</van-goods-action>
+  </view>
+</view>

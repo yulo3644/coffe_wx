@@ -1,0 +1,77 @@
+<!--pages/menu/menu.wxml-->
+<view>
+  <van-search placeholder="请输入搜索关键字" shape="round"/>
+</view>
+
+<!-- tab导航切换 -->
+<view class="container">
+  <!-- 切换的大盒子 -->
+  <view class="mynav">
+    <!-- 分类标题 -->
+    <!-- 热卖推荐 -->
+    <view class="item {{num==0?'active':''}}" data-datanum="0" bindtap="qiehuan" data-obj='{"key":"isHot","value":"1"}'>
+      <view class="image" wx:if="{{num!=0?true:false}}">
+        <image class="images" src="../../image/icons_09.gif" mode="" />
+      </view>
+      <view class="image" wx:if="{{num==0?true:false}}">
+        <image class="images" src="../../image/icons_21.gif" mode="" />
+      </view>
+      <view class="text">
+        <text class="texts">热卖推荐</text>
+      </view>
+    </view>
+
+    <view class="item {{num==1?'active':''}}" data-datanum="1" bindtap="qiehuan" data-obj='{"key":"type","value":"latte"}'>
+      <view class="image" wx:if="{{num!=1?true:false}}">
+        <image class="images" src="../../image/icons_05.gif" mode="" />
+      </view>
+      <view class="image" wx:if="{{num==1?true:false}}">
+        <image class="images" src="../../image/icons_19.gif" mode="" />
+      </view>
+      <view class="text">
+        <text class="texts">拿铁</text>
+      </view>
+
+    </view>
+
+    <view class="item {{num==2?'active':''}}" data-datanum="2" bindtap="qiehuan" data-obj='{"key":"type","value":"coffee"}'>
+      <view class="image" wx:if="{{num!=2?true:false}}">
+        <image class="images" src="../../image/icons_03.gif" mode="" />
+      </view>
+      <view class="image" wx:if="{{num==2?true:false}}">
+        <image class="images" src="../../image/icons_18.gif" mode="" />
+      </view>
+      <view class="text">
+        <text class="texts">咖啡</text>
+      </view>
+    </view>
+
+    <view class="item {{num==3?'active':''}}" data-datanum="3" bindtap="qiehuan" data-obj='{"key":"type","value":"rena_ice"}'>
+      <view class="image" wx:if="{{num!=3?true:false}}">
+        <image class="images" src="../../image/icons_07.gif" mode="" />
+      </view>
+      <view class="image" wx:if="{{num==3?true:false}}">
+        <image class="images" src="../../image/icons_20.gif" mode="" />
+      </view>
+      <view class="text">
+        <text class="texts">瑞纳冰</text>
+      </view>
+    </view>
+
+    <view class="item {{num==4?'active':''}}" data-datanum="4" bindtap="qiehuan" data-obj='{"key":"type","value":"fruit_tea"}'>
+      <view class="image" wx:if="{{num!=4?true:false}}">
+        <image class="images" src="../../image/icons_11.gif" mode="" />
+      </view>
+      <view class="image" wx:if="{{num==4?true:false}}">
+        <image class="images" src="../../image/icons_22.png" mode="" />
+      </view>
+      <view class="text">
+        <text class="texts">水果茶</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <menu-list wx:if="{{obj}}" comobj="{{obj}}"></menu-list>
+  </view>
+
+</view>

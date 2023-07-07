@@ -1,0 +1,56 @@
+.main{
+  padding: 10px;
+}
+.myiput{
+  width: 100%;
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.myiput .text{
+  display: inline-block;
+  width: 30%;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  color: #646566;
+}
+.input{
+  width: 60%;
+  height: 50%;
+  font-size: 12px;
+  text-indent: 10px;
+}
+.forget{
+  text-align: right;
+  color:#666666;
+  padding: 20px 0;
+}
+.btn{
+  margin-top: 40px;
+}
+.btn .btn1 button,.btn .btn2 button{
+  width: 100%;
+  background-color: #0C34BA;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  border-radius:100px;
+  font-size: 12px;
+  margin-top:50px ;
+}
+.btn2 button{
+  color:#323233 !important;
+  background-color: #fff !important;
+}
+.wcm .text{
+  font-size: 32px;
+  color: #444444;
+}
+.wem{
+  padding: 30px 0 40px 0;
+}
+.wem .text{
+  color: #999999;
+}

@@ -1,0 +1,23 @@
+<!--pages/components/home-list/home-list.wxml-->
+<view class="reqlist">
+      <view wx:for="{{arr}}" wx:key="index" class="shangping" data-pid="{{item.pid}}" bindtap="godatail">
+        <view class="remai">
+          <text>热卖</text>
+        </view>
+        <view>
+          <image src="{{item.smallImg}}" mode="" class="image"/>
+        </view>
+        <view class="name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="ename">
+          <text>{{item.enname}}</text>
+        </view>
+        <view class="price">
+          <text>￥{{item.price}}</text>
+        </view>
+
+      </view>
+    </view>
+
+

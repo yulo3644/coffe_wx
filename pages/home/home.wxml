@@ -1,0 +1,46 @@
+<!--pages/home/home.wxml-->
+<!-- 整个页面的大背景 -->
+<view class="mainbg">
+<!-- 顶部栏 -->
+  <view class="top">
+  <!-- 左边是用户栏和问候语 -->
+    <view class="user">
+      <text>上午好</text>
+      <text bindtap="login">登录</text>
+    </view>
+      <!-- 右边的搜索 -->
+    <view class="search">
+      <!-- 输入框 -->
+      <view>
+        <input type="text" class="inp" placeholder="请输入搜索关键词"/>
+      </view>
+    <!-- 搜索图标 -->
+      <view>
+        <van-icon name="search" class="ico"/>
+      </view>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="bannerImg">
+  <!-- 轮播图的组件 -->
+  <swiper autoplay  circular  indicator-dots current="{{num}}">
+  <!-- 轮播图项目 -->
+  <swiper-item wx:for="{{bannerarr}}" wx:key="index">
+    <image src="{{item.bannerImg}}" mode=""/>
+  </swiper-item>
+  </swiper>
+  <!-- 自定义指示点 -->
+  <view class="indication">
+  <view wx:for="{{bannerarr}}" class='point{{num==index?"active":""}}' wx:key="index"> 
+  </view>  
+  </view>
+    <!-- 轮播图 end -->
+    <!-- 商品列表 -->
+    <view class="hot">  
+    </view>
+    <view>
+    <homelist arr="{{hotlist}}"></homelist>
+    </view>  
+  </view>  
+
+</view>

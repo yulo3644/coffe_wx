@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "menu-list":"../components/menu-list/menu-list"
+  }
+}

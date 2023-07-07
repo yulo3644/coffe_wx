@@ -1,0 +1,128 @@
+.mian{
+  position: relative;
+  height: 100vh;
+  background-color: #ccc;
+}
+.img{
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  z-index: 999;
+}
+.img .image{
+  width: 100%;
+  height: 100%;
+}
+.introduce{
+  position:absolute;
+  z-index: 999;
+  top: 240px;
+  background-color: blue;
+  background-color: #fff;
+  width: 89%;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.introduce .titname{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.introduce .titname .nameleft{
+  width: 70%;
+  height: 70px;
+  overflow: scroll;
+}
+.introduce .titname .nameright{
+  flex:1;
+  text-align: right;
+  height: 60px;
+  line-height: 60px;
+  color: tomato;
+  font-weight: bold;
+}
+.introduce .nameleft view{
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+}
+.introduce .nameleft view:nth-of-type(2){
+  font-size: 12px;
+  color: #999;
+}
+.select{
+  font-size: 14px;
+}
+.selectitem{
+  display: flex;
+  margin-top: 3px;
+}
+.select .selectitem view:nth-of-type(1){
+  width: 20%;
+  height: 30px;
+  line-height: 30px;
+}
+.select .selectitem view:nth-of-type(2){
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.select .selectitem view:nth-of-type(2) text{
+  padding: 3px 15px;
+  margin-right: 8px;
+  background-color: blue;
+  color: #444;
+  background-color: #ccc;
+  text-align: center;
+  border-radius: 20px;
+}
+.select .selectitem view:nth-of-type(2) .active{
+  background-color: rgb(12,53,186);
+  color:#fff;
+}
+.select-count-box{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: #f5f5f5 1px solid;
+  margin-top: 25px;
+  color: #666;
+  font-size: 14px;
+}
+.select-count-box view:nth-of-type(2) text:nth-of-type(1),.select-count-box view:nth-of-type(2) text:nth-of-type(3){
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #FEBEC0;
+  color: #FEBEC0;
+  text-align: center;
+  line-height: 22px;
+  font-size: 18px;
+  border-radius: 50%;
+}
+.select-count-box view:nth-of-type(2) text:nth-of-type(2){
+  margin: 0 15px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  color: #323233;
+}
+.select-count-box view:nth-of-type(2) text:nth-of-type(3){
+  border: none;
+  background-color: #EE0D24;
+  color:#fff;
+}
+.desc .tit{
+  font-size: 14px;
+  margin: 10px;
+  color:#444;
+}
+.desc .mains{
+  font-size: 12px;
+  color: #666;
+}
+
+

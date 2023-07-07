@@ -1,0 +1,33 @@
+<view class="main">
+<view class="welcome">
+  <view class="wcm">
+    <text class="text">欢迎回来！</text>
+  </view>
+  <view class="wem">
+    <text class="text">Please login to your accounts</text>
+  </view>
+</view>
+<view class="inp">
+  <view class="myiput">
+    <text class="text">手机号</text>
+    <input type="text" class="input" placeholder="手机号" model:value="{{myphone}}"/>
+  </view>
+  <view class="myiput">
+    <text class="text">密码</text>
+    <input type="password" class="input" placeholder="密码" model:value="{{mypas}}"/>
+  </view>
+  <view class="forget">
+    <text>忘记密码？</text>
+  </view>
+</view>
+<view>
+  <view class="btn">
+  <view class="btn1">
+    <button bindtap="btnlogin">登录</button>
+  </view>
+  <view class="btn2">
+    <button>注册</button>
+  </view>
+</view>
+</view>
+</view>
